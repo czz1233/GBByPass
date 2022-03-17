@@ -1,7 +1,7 @@
 # GBByPass
 冰蝎bypass 原理通过Unicode编码绕过关键字
 # 更新哥斯拉
-## 效果图
+## 哥斯拉效果图
 ![](images/godz.png)
 ## 360 
 ![](images/360.png)
