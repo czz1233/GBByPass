@@ -58,7 +58,7 @@ public class Main {
         System.out.println("[+]Creating Local File......");
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("[+]输入1生成Godzilla；\n[+]输入2生成Behinder;\n[+]输入3生成绕过阿里云检测一句话：");
+        System.out.println("[+]输入1生成Godzilla;\n[+]输入2生成Behinder;\n[+]输入3生成绕过阿里云检测一句话：");
 
 
         String firStr = sc.next();
