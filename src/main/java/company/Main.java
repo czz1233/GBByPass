@@ -10,6 +10,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+import static company.RandomUtil.generateByRandom;
+
 public class Main {
 
     public static void main(String[] paramArrayOfString)  {
@@ -24,19 +26,19 @@ public class Main {
         System.out.println("***********************************************************");
         System.out.println("Godzilla java_aes_raw连接默认密码为:1");
         System.out.println("Behinder默认密码为:Tas9er");
-        String str = "tas9er" +"test";
-        String str2 = "tas9er" +"test";
-        String str3 = "tas9er" +"test";
-        String str4 = "tas9er" +"test";
-        String str5 = "tas9er" +"test";
-        String str6 = "tas9er" +"test";
-        String str7 = "tas9er" +"test";
-        String str8 = "tas9er" +"test";
-        String str9 = "tas9er" +"test";
-        String str10 = "tas9er" +"test";
-        String str11 = "tas9er" +"test";
-        String str12 = "tas9er" +"test";
-        String str13 = "tas9er" +"test";
+        String str = "tas9er" +generateByRandom(2);
+        String str2 = "tas9er" +generateByRandom(2);
+        String str3 = "tas9er" +generateByRandom(2);
+        String str4 = "tas9er" +generateByRandom(2);
+        String str5 = "tas9er" +generateByRandom(2);
+        String str6 = "tas9er" +generateByRandom(2);
+        String str7 = "tas9er" +generateByRandom(2);
+        String str8 = "tas9er" +generateByRandom(2);
+        String str9 = "tas9er" +generateByRandom(2);
+        String str10 = "tas9er" +generateByRandom(2);
+        String str11 = "tas9er" +generateByRandom(2);
+        String str12 = "tas9er" +generateByRandom(2);
+        String str13 = "tas9er" +generateByRandom(2);
         String replaceAll="";
         System.out.println(StringUtils.EMPTY);
         System.out.println("[+]Loading Random Algorithm......");
