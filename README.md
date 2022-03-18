@@ -11,9 +11,9 @@
 [+]Loading Random Algorithm......
 [+]Checking Coding Compliance......
 [+]Creating Local File......
-输入1生成Godzilla；
-输入2生成Behinder;
-输入3生成绕过阿里云检测一句话：
+[+]输入1生成Godzilla；
+[+]输入2生成Behinder;
+[+]输入3生成绕过阿里云检测一句话：
 ```
 
 # 已添加绕过阿里云检测-命令执行
