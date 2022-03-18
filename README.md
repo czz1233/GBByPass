@@ -13,4 +13,7 @@
 ## webdir+
 ![](images/webdir+.png)
 
-![](https://starchart.cc/czz1233/GBByPass)
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/czz1233/GBByPass.svg)](https://starchart.cc/czz1233/GBByPass)
