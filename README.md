@@ -1,7 +1,7 @@
 # 添加绕过阿里云检测 命令执行
 http://xxx:8080/test.jsp?cmd=whoami
 ![](images/demoali.png)
-阿里云检测结果
+## 阿里云检测结果
 ![](images/passali.png)
 # GBByPass
 冰蝎 哥斯拉 webshell bypass 原理通过Unicode编码绕过关键字
